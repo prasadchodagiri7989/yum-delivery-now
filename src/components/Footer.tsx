@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-display font-bold mb-4">
-              CloudKitchen
+              Piquant
             </h3>
             <p className="text-accent-foreground/80 mb-6 leading-relaxed">
               Fresh, hygienic, and delicious meals delivered to your doorstep. 
@@ -52,14 +52,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-accent-foreground/80">
                 <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
-                <span className="text-sm">hello@cloudkitchen.com</span>
+                <span className="text-sm">hello@piquant.com</span>
               </div>
             </div>
           </div>
         </div>
         
         <div className="border-t border-accent-foreground/20 mt-12 pt-8 text-center text-accent-foreground/60">
-          <p>&copy; 2024 CloudKitchen. All rights reserved. Made with ❤️ for food lovers.</p>
+          <p>&copy; 2024 Piquant. All rights reserved. Made with ❤️ for food lovers.</p>
         </div>
       </div>
     </footer>

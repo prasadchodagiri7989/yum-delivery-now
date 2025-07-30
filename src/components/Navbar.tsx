@@ -1,25 +1,26 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ShoppingCart, Utensils } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Cart from "./Cart";
+import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Menu, X, ShoppingCart, Utensils } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import Cart from "./Cart"
+import { useCart } from "@/context/CartContext"
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const location = useLocation();
-  
-  // Mock cart items count - this would come from context/state management
-  const cartItemsCount = 3;
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isCartOpen, setIsCartOpen] = useState(false)
+  const location = useLocation()
+  const { cartItems } = useCart() // ✅ Access real cart data
+
+  const cartItemsCount = cartItems.reduce((total, item) => total + item.quantity, 0)
 
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Food Menu", href: "/menu" },
     { name: "Subscriptions", href: "/subscriptions" },
-  ];
+  ]
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path
 
   return (
     <>
@@ -31,9 +32,7 @@ const Navbar = () => {
               <div className="bg-warm-gradient p-2 rounded-xl">
                 <Utensils className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-display font-bold text-foreground">
-                CloudKitchen
-              </span>
+              <span className="text-xl font-display font-bold text-foreground">Piquant</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -43,9 +42,7 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) 
-                      ? "text-primary" 
-                      : "text-muted-foreground"
+                    isActive(item.href) ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
                   {item.name}
@@ -64,8 +61,8 @@ const Navbar = () => {
               >
                 <ShoppingCart className="h-5 w-5" />
                 {cartItemsCount > 0 && (
-                  <Badge 
-                    variant="destructive" 
+                  <Badge
+                    variant="destructive"
                     className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center text-xs"
                   >
                     {cartItemsCount}
@@ -80,11 +77,7 @@ const Navbar = () => {
                 className="md:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                {isMenuOpen ? (
-                  <X className="h-5 w-5" />
-                ) : (
-                  <Menu className="h-5 w-5" />
-                )}
+                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
             </div>
           </div>
@@ -98,9 +91,7 @@ const Navbar = () => {
                     key={item.name}
                     to={item.href}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
-                      isActive(item.href) 
-                        ? "text-primary" 
-                        : "text-muted-foreground"
+                      isActive(item.href) ? "text-primary" : "text-muted-foreground"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -116,7 +107,7 @@ const Navbar = () => {
       {/* Cart Sidebar */}
       <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

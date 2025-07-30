@@ -2,75 +2,120 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "./WhatsAppButton";
 
-const plans = [
+export const plans = [
   {
     id: 1,
-    name: "Veg Plan",
-    emoji: "🥬",
-    color: "fresh-gradient",
-    description: "Pure vegetarian meals with fresh vegetables and grains",
-    weeklyPrice: "₹1,299",
-    monthlyPrice: "₹4,999",
-    dishes: [
-      "Dal Tadka with Rice",
-      "Paneer Butter Masala",
-      "Mixed Veg Curry",
-      "Roti & Salad",
-      "Fresh Fruit Bowl"
-    ],
-    features: [
-      "100% Vegetarian",
-      "High Fiber & Protein",
-      "Fresh Daily",
-      "No Preservatives"
-    ]
+    name: "Monthly Breakfast Box (Veg)",
+    emoji: "🍽️",
+    color: "sunrise-gradient",
+    description: "Monthly vegetarian breakfast subscription with homemade items.",
+    weeklyPrice: "₹550",
+    monthlyPrice: "₹2,000",
+    dishes: ["Idli", "Upma", "Chutney"],
+    features: ["100% Vegetarian", "Homemade Taste", "Healthy Breakfast", "Daily Fresh Prep"],
   },
   {
     id: 2,
-    name: "Non-Veg Plan",
-    emoji: "🍗",
-    color: "warm-gradient",
-    description: "Protein-rich meals with chicken, fish, and meat specialties",
-    weeklyPrice: "₹1,699",
-    monthlyPrice: "₹6,499",
-    dishes: [
-      "Chicken Curry with Rice",
-      "Fish Fry & Vegetables",
-      "Mutton Biryani",
-      "Egg Curry & Roti",
-      "Grilled Chicken Salad"
-    ],
-    features: [
-      "High Protein",
-      "Premium Cuts",
-      "Lean & Healthy",
-      "Chef's Special"
-    ],
-    popular: true
+    name: "Monthly Lunch Box (Veg)",
+    emoji: "🥗",
+    color: "green-gradient",
+    description: "Nutritious vegetarian lunch delivered daily for a month.",
+    weeklyPrice: "₹1,100",
+    monthlyPrice: "₹4,000",
+    dishes: ["Rice", "Dal", "Vegetable Curry"],
+    features: ["Balanced Nutrition", "Fresh Veggies", "No Preservatives", "High Fiber"],
   },
   {
     id: 3,
-    name: "Mixed Plan",
-    emoji: "🍽️",
-    color: "accent",
-    description: "Best of both worlds with variety of veg and non-veg options",
-    weeklyPrice: "₹1,499",
-    monthlyPrice: "₹5,749",
-    dishes: [
-      "Veg & Non-Veg Curries",
-      "Biryani Varieties",
-      "Mixed Grill Platter",
-      "Seasonal Specials",
-      "Dessert of the Day"
-    ],
-    features: [
-      "Maximum Variety",
-      "Balanced Nutrition",
-      "Seasonal Menu",
-      "Flexible Options"
-    ]
+    name: "Monthly Dinner Box (Veg)",
+    emoji: "🌙",
+    color: "evening-gradient",
+    description: "Healthy homemade vegetarian dinner meals delivered every evening.",
+    weeklyPrice: "₹850",
+    monthlyPrice: "₹3,000",
+    dishes: ["Chapati", "Dry Curry", "Curd Rice"],
+    features: ["Low Fat", "Light Meals", "Homemade", "Daily Delivery"],
+  },
+  {
+    id: 4,
+    name: "Monthly Full-Day Meals (Veg)",
+    emoji: "🍱",
+    color: "pure-gradient",
+    description: "Complete subscription of breakfast, lunch, and dinner for vegetarians.",
+    weeklyPrice: "₹2,300",
+    monthlyPrice: "₹9,000",
+    dishes: ["All 3 Meals - Veg"],
+    features: ["All-Day Energy", "Hygienic Prep", "Full Day Plan", "Best Value Veg"],
+    popular: true,
+  },
+  {
+    id: 5,
+    name: "Monthly Lunch Box (Non-Veg)",
+    emoji: "🍗",
+    color: "spicy-gradient",
+    description: "Daily non-vegetarian lunch subscription with flavorful curries.",
+    weeklyPrice: "₹1,400",
+    monthlyPrice: "₹5,200",
+    dishes: ["Rice", "Chicken Curry", "Fry Item"],
+    features: ["Protein-Rich", "Fresh Meat Daily", "No Artificial Additives", "Balanced Meal"],
+  },
+  {
+    id: 6,
+    name: "Monthly Dinner Box (Non-Veg)",
+    emoji: "🥘",
+    color: "night-gradient",
+    description: "Hearty non-veg dinners delivered daily including rice and curry.",
+    weeklyPrice: "₹1,050",
+    monthlyPrice: "₹3,900",
+    dishes: ["Rice", "Chapati", "Chicken Curry"],
+    features: ["Healthy Dinner", "Protein-Focused", "Tasty Recipes", "Home Style"],
+  },
+  {
+    id: 7,
+    name: "Monthly Full-Day Meals (Non-Veg)",
+    emoji: "🍛",
+    color: "bold-gradient",
+    description: "Includes lunch and dinner for 4 days non-veg and 3 days veg each week.",
+    weeklyPrice: "₹3,000",
+    monthlyPrice: "₹11,500",
+    dishes: ["All 3 Meals - Mixed"],
+    features: ["Mixed Diet", "High Protein", "Homestyle Meals", "Popular Choice"],
+  },
+  {
+    id: 8,
+    name: "Diet Full-Day Plan (Veg)",
+    emoji: "🥗",
+    color: "healthy-gradient",
+    description: "Complete veg diet plan including breakfast, lunch, and dinner.",
+    weeklyPrice: "₹3,500",
+    monthlyPrice: "₹13,000",
+    dishes: ["Oats", "Sprouts", "Veg Lunch", "Soup", "Chapati"],
+    features: ["Low Carb", "High Fiber", "Weight Control", "Balanced Diet"],
+  },
+  {
+    id: 9,
+    name: "Diet Full-Day Plan (Non-Veg)",
+    emoji: "🍴",
+    color: "fitness-gradient",
+    description: "Monthly plan: 4 days non-veg, 3 days veg — all 3 meals covered.",
+    weeklyPrice: "₹4,200",
+    monthlyPrice: "₹16,500",
+    dishes: ["Eggs", "Chicken", "Fish", "Oats", "Brown Rice"],
+    features: ["High Protein", "Fitness Focused", "Fresh Lean Meat", "Weight Management"],
+  },
+  {
+    id: 10,
+    name: "Diet Fruit Bowl & Juice",
+    emoji: "🍓",
+    color: "fruit-gradient",
+    description: "Monthly subscription of fruit bowls and healthy cold-pressed juices.",
+    weeklyPrice: "₹1,300",
+    monthlyPrice: "₹5,000",
+    dishes: ["Apple", "Papaya", "Banana", "Mint Juice", "Carrot Juice"],
+    features: ["Immunity Boost", "Fresh Daily", "Cold-Pressed", "No Sugar Added"],
   }
-];
+]
+
 
 const SubscriptionPlans = () => {
   return (
@@ -84,10 +129,10 @@ const SubscriptionPlans = () => {
             Save time and money with our convenient meal plans. Fresh food delivered daily to your doorstep.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan) => (
-            <div 
+            <div
               key={plan.id}
               className={`bg-card rounded-3xl p-8 shadow-card hover:shadow-hover 
                          transition-all duration-300 hover:scale-105 relative
@@ -100,7 +145,7 @@ const SubscriptionPlans = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="text-center mb-6">
                 <div className={`w-20 h-20 rounded-full bg-${plan.color} flex items-center justify-center mx-auto mb-4`}>
                   <span className="text-3xl">{plan.emoji}</span>
@@ -112,7 +157,7 @@ const SubscriptionPlans = () => {
                   {plan.description}
                 </p>
               </div>
-              
+
               <div className="text-center mb-6">
                 <div className="flex justify-center items-center gap-4 mb-2">
                   <div>
@@ -126,7 +171,7 @@ const SubscriptionPlans = () => {
                 </div>
                 <p className="text-xs text-muted-foreground">Save 20% with monthly plans</p>
               </div>
-              
+
               <div className="mb-6">
                 <h4 className="font-semibold text-foreground mb-3">Sample Dishes:</h4>
                 <ul className="space-y-2">
@@ -137,7 +182,7 @@ const SubscriptionPlans = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="mb-8">
                 <h4 className="font-semibold text-foreground mb-3">Features:</h4>
                 <ul className="space-y-2">
@@ -149,7 +194,7 @@ const SubscriptionPlans = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <WhatsAppButton
                 message={`Hi, I want to subscribe to the ${plan.name} - Monthly Plan for ${plan.monthlyPrice}`}
                 className="w-full"
