@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FeaturedFoods from "@/components/FeaturedFoods";
@@ -11,6 +12,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <WhyChooseUs />
       <FeaturedFoods />
