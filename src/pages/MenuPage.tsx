@@ -46,7 +46,26 @@ const mapDataToProducts = (data: any[]): Product[] => {
 };
 
 const allProducts: Product[] = mapDataToProducts(rawFoodData);
-const categories = ["All", "Main Course", "Appetizers", "Salads", "Italian", "Desserts", "bhojanam-box"];
+const categories = [
+  "All", // Keep 'All' at the beginning
+  "bhojanam-box",
+  "bhojanam-subscription",
+  "diet-food",
+  "diet-subscription",
+  "podulu",
+  "rice-mix",
+  "traditional-snacks",
+  "pickles",
+  "cakes",
+  "starters",
+  "biryani",
+  "noodles",
+  "desserts",
+  "beverages",
+  "tandoori",
+  "rice-curry",
+  "indian-breads"
+];
 const filters = ["All", "Veg", "Non-Veg", "Spicy", "Mild"];
 
 const MenuPage = () => {
@@ -89,52 +108,52 @@ const MenuPage = () => {
       </section>
 
       {/* Filters */}
-      <section className="py-8 bg-muted/30 sticky top-16 z-30 backdrop-blur-sm">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                type="text"
-                placeholder="Search for dishes..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
+<section className="py-8 bg-muted/20">
+  <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-4">
+    {/* Search Input */}
+    <div className="relative w-full md:w-1/3">
+      <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
+      <Input
+        type="text"
+        placeholder="Search for dishes..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="pl-10"
+      />
+    </div>
 
-            {/* Categories */}
-            <div className="flex gap-2 flex-wrap">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
+    {/* Category Dropdown */}
+    <div className="w-full md:w-1/4">
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        className="w-full p-2 rounded-md border text-sm"
+      >
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+          </option>
+        ))}
+      </select>
+    </div>
 
-            {/* Filters */}
-            <div className="flex gap-2">
-              <Filter className="h-4 w-4 text-muted-foreground mt-2" />
-              {filters.map((filter) => (
-                <Button
-                  key={filter}
-                  variant={selectedFilter === filter ? "secondary" : "ghost"}
-                  size="sm"
-                  onClick={() => setSelectedFilter(filter)}
-                >
-                  {filter}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Filter Dropdown */}
+    <div className="w-full md:w-1/4">
+      <select
+        value={selectedFilter}
+        onChange={(e) => setSelectedFilter(e.target.value)}
+        className="w-full p-2 rounded-md border text-sm"
+      >
+        {filters.map((filter) => (
+          <option key={filter} value={filter}>
+            {filter}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+</section>
+
 
       {/* Products */}
       <section className="py-12">

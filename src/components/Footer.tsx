@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-accent-foreground/80">
                 <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                <span className="text-sm">123 Food Street, Kitchen City, KC 12345</span>
+                <span className="text-sm">Food Street, Vishakapatnam</span>
               </div>
               <div className="flex items-center text-accent-foreground/80">
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-accent-foreground/20 mt-12 pt-8 text-center text-accent-foreground/60">
-          <p>&copy; 2024 Piquant. All rights reserved. Made with ❤️ for food lovers.</p>
+          <p>&copy; 2025 Piquant. All rights reserved. Made with ❤️ for food lovers.</p>
         </div>
       </div>
     </footer>

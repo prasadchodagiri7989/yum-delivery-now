@@ -6,28 +6,28 @@ const testimonials = [
     name: "Priya Sharma",
     rating: 5,
     comment: "Amazing food quality and super fast delivery! The subscription plan saves me so much time.",
-    location: "Mumbai"
+    location: "Hyderabad"
   },
   {
     id: 2,
     name: "Rajesh Kumar",
     rating: 5,
     comment: "Fresh ingredients, authentic taste, and always on time. Best cloud kitchen in the city!",
-    location: "Delhi"
+    location: "Vishakapatnam"
   },
   {
     id: 3,
-    name: "Anita Patel",
+    name: "Anita P",
     rating: 5,
     comment: "Love the variety in the mixed plan. My family enjoys every meal. Highly recommended!",
-    location: "Bangalore"
+    location: "Vijayawada"
   },
   {
     id: 4,
-    name: "Vikram Singh",
+    name: "Vikram S",
     rating: 5,
     comment: "Hygienic packaging and delicious food. The non-veg plan is perfect for protein lovers.",
-    location: "Pune"
+    location: "Vizianagaram"
   }
 ];
 

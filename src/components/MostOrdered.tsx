@@ -3,48 +3,49 @@ import WhatsAppButton from "./WhatsAppButton";
 
 const topSellers = [
   {
-    id: 1,
-    name: "Butter Chicken",
-    price: "₹329",
-    labels: ["Spicy", "Popular"],
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop"
-  },
-  {
-    id: 2,
-    name: "Margherita Pizza",
-    price: "₹279",
-    labels: ["Kids Special", "Cheese Loaded"],
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop"
-  },
-  {
-    id: 3,
-    name: "Grilled Salmon",
-    price: "₹449",
-    labels: ["High-Protein", "Healthy"],
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop"
-  },
-  {
-    id: 4,
-    name: "Paneer Tikka",
-    price: "₹299",
-    labels: ["Vegetarian", "Spicy"],
-    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop"
-  },
-  {
     id: 5,
-    name: "Caesar Salad",
-    price: "₹229",
-    labels: ["Healthy", "Light"],
-    image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop"
+    name: "Curry Box (Veg)",
+    price: "₹125",
+    labels: ["Vegetarian", "Medium Spice"],
+    image: "/food-images/BojanamBox/0e715939aedc11cc8f16be414482d60e.jpg"
   },
   {
     id: 6,
-    name: "Chicken Wings",
-    price: "₹319",
-    labels: ["Spicy", "High-Protein"],
-    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop"
+    name: "Curry Box (Non-Veg)",
+    price: "₹180",
+    labels: ["Non-Veg", "Hot"],
+    image: "/food-images/BojanamBox/15f0365f4dddf1cf22d67613af8dc95d.jpg"
+  },
+  {
+    id: 7,
+    name: "Curry Box (Veg & Non-Veg)",
+    price: "₹155",
+    labels: ["Mixed", "Medium Spice"],
+    image: "https://source.unsplash.com/combo-curry"
+  },
+  {
+    id: 8,
+    name: "Dinner Box (Veg)",
+    price: "₹100",
+    labels: ["Vegetarian", "Mild"],
+    image: "/food-images/BojanamBox/49df111dc4962648a4cfb9aa5756b161.jpg"
+  },
+  {
+    id: 9,
+    name: "Dinner Box (Non-Veg)",
+    price: "₹130",
+    labels: ["Non-Veg", "Mild"],
+    image: "/food-images/BojanamBox/81724aca51bf628586e4497f4d469a40.jpg"
+  },
+  {
+    id: 21,
+    name: "Diet Lunch Box (Veg)",
+    price: "₹220",
+    labels: ["Vegetarian", "Healthy"],
+    image: "/food-images/DietFood/3731c8de8b2061eb9ebf083963c2bca6.jpg"
   }
 ];
+
 
 const MostOrdered = () => {
   return (

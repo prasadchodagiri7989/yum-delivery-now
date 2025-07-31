@@ -1,43 +1,40 @@
 import WhatsAppButton from "./WhatsAppButton";
-import biryaniImage from "@/assets/biryani.jpg";
-import saladImage from "@/assets/salad.jpg";
-import chickenImage from "@/assets/chicken.jpg";
-import pastaImage from "@/assets/pasta.jpg";
 
 const dishes = [
   {
     id: 1,
-    name: "Chicken Biryani",
-    emoji: "🍗",
-    price: "₹299",
-    image: biryaniImage,
-    description: "Aromatic basmati rice with tender chicken and traditional spices"
+    name: "Breakfast Box (Veg)",
+    emoji: "🥦",
+    price: "₹80",
+    image: "/food-images/BojanamBox/2b045d361ca6d0b02bd8b10f0fc55b8f.jpg",
+    description: "Healthy vegetarian breakfast with balanced calories and medium spice"
   },
   {
     id: 2,
-    name: "Fresh Garden Salad",
+    name: "Lunch Box (Veg)",
     emoji: "🥗",
-    price: "₹199",
-    image: saladImage,
-    description: "Crispy vegetables with homemade dressing and fresh herbs"
+    price: "₹145",
+    image: "/food-images/BojanamBox/18bc977962547c723b955e8092997635.jpg",
+    description: "Nutritious vegetarian lunch with mild spices and fresh ingredients"
   },
   {
     id: 3,
-    name: "Grilled Chicken",
-    emoji: "🍖",
-    price: "₹349",
-    image: chickenImage,
-    description: "Perfectly grilled chicken with herbs and special marinade"
+    name: "Lunch Box (Non-Veg)",
+    emoji: "🍗",
+    price: "₹200",
+    image: "/food-images/BojanamBox/eefc3ca47b1f0a99eb5c20be5136dfeb.jpg",
+    description: "Protein-packed non-vegetarian lunch with tender meat and mild spice"
   },
   {
     id: 4,
-    name: "Pasta Primavera",
-    emoji: "🍝",
-    price: "₹249",
-    image: pastaImage,
-    description: "Fresh pasta with seasonal vegetables in creamy sauce"
+    name: "Lunch Box (Veg & Non-Veg)",
+    emoji: "🍱",
+    price: "₹175",
+    image: "/food-images/BojanamBox/18bc977962547c723b955e8092997635.jpg",
+    description: "Mixed combo of vegetarian and non-vegetarian dishes with balanced flavors"
   }
 ];
+
 
 const FeaturedFoods = () => {
   return (
