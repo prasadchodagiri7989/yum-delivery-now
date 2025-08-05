@@ -13,14 +13,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 5000); // adjust duration as needed
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) return <Preloader />;
 
   return (
     <QueryClientProvider client={queryClient}>
