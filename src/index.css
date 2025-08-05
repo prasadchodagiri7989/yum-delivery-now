@@ -115,3 +115,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+body {
+  background: url('/assets/food-bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.clip-ellipse {
+  clip-path: ellipse(80% 100% at 0% 50%);
+}

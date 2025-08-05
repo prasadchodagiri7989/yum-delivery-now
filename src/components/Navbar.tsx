@@ -28,12 +28,10 @@ const Navbar = () => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-warm-gradient p-2 rounded-xl">
-                <Utensils className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-display font-bold text-foreground">Piquant</span>
-            </Link>
+<Link to="/" className="flex items-center gap-2">
+  <img src="/assets/logo.png" alt="Logo" className="h-16" />
+</Link>
+
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">

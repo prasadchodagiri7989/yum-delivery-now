@@ -8,6 +8,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import CategoriesSection from "@/components/CategoriesSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <WhyChooseUs />
       <FeaturedFoods />
       <MostOrdered />
+      <CategoriesSection />
       <SubscriptionPlans />
       <HowItWorks />
       <Testimonials />

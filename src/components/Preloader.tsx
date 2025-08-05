@@ -1,6 +1,6 @@
 // src/components/Preloader.tsx
 import Lottie from "lottie-react";
-import animationData from "@/assets/Food Carousel.json"; // Ensure correct path
+const animationData = "/assets/Food Carousel.json"; // Ensure correct path
 
 const Preloader = () => (
   <div className="fixed inset-0 bg-white z-[9999] flex items-center justify-center">

@@ -1,48 +1,39 @@
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "./WhatsAppButton";
-import heroImage from "@/assets/hero-bg.jpg";
+const heroImage = "/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-hero-gradient"></div>
+    <section className="relative min-h-screen bg-[#fdf3e5] overflow-hidden">
+      {/* Top Right Tagline */}
+      <p className="absolute top-6 right-6 text-sm font-semibold tracking-wider text-[#3b2d26] z-10">
+        PURE. FRESH. NOURISHING. HOMEMADE WITH CARE
+      </p>
+
+      {/* Decorative Sparkle & Line */}
+      <div className="hidden md:flex flex-col items-center absolute right-4 bottom-10 z-10">
+        <div className="h-44 w-px bg-[#c89c34]"></div>
+        <div className="text-[#c89c34] text-2xl mt-1">✧</div>
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 drop-shadow-lg">
-          Your Daily Meals
-        </h1>
-        <p className="text-6xl md:text-8xl font-display font-bold mb-4 bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
-          One Click Away
+
+      {/* Left-side Curved Image */}
+      <div className="absolute bottom-0 left-0 w-[55%] h-[70%] z-0">
+        <div
+          className="w-full h-full bg-cover bg-center rounded-br-[300px] rounded-tr-[80px]"
+          style={{ backgroundImage: "url('/assets/categories/biryani.jpg')" }}
+        ></div>
+      </div>
+
+      {/* Right-side Logo & Tagline */}
+      <div className="flex flex-col items-end justify-center h-full pr-10 pt-32 text-right relative z-10">
+        <img
+          src="/assets/logo.png"
+          alt="Piquant Logo"
+          className="w-72 max-w-full mb-2"
+        />
+        <p className="text-lg md:text-xl text-[#1e1e1e] font-medium">
+          Relish your taste buds
         </p>
-        <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90">
-          Fresh, hygienic, and delicious meals delivered to your doorstep. 
-          Choose from instant orders or convenient subscription plans.
-        </p>
-        
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <WhatsAppButton 
-            message="Hi! I want to place an instant order"
-            className="text-lg px-10 py-4 min-w-[200px]"
-          >
-            Order Now
-          </WhatsAppButton>
-          <Button 
-            variant="outline" 
-            size="xl"
-            className="text-lg min-w-[200px] bg-white/10 border-white/30 text-white hover:bg-white hover:text-accent"
-            onClick={() => document.getElementById('subscription-plans')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Subscribe & Save
-          </Button>
-        </div>
       </div>
     </section>
   );

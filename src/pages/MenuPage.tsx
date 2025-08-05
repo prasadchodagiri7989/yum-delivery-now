@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import ProductDetailModal, { Product } from "@/components/ProductDetailModal";
 import rawFoodData from "@/data/data";
-import fallbackImage from "@/assets/biryani.jpg";
+const fallbackImage = "/assets/biryani.jpg";
 
 const mapDataToProducts = (data: any[]): Product[] => {
   return data.map((item) => ({
